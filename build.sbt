@@ -21,6 +21,9 @@ lazy val cli = Project("cli", file("cli"))
       // JSON library
       "io.circe" %% "circe-core" % CirceVersion,
       "io.circe" %% "circe-generic" % CirceVersion,
+      
+      // DateTime library, because Java DateTimes are pants
+      "joda-time" % "joda-time" % "2.10.2",
 
       // Test library
       "org.scalatest" %% "scalatest" % ScalaTestVersion % "test",

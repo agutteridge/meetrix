@@ -1,14 +1,14 @@
 package org.scalabridge.meetrix
-import InputParsing.parseInput
+
+import org.scalabridge.meetrix.parse.{InputParser, SearchParser}
 
 object Main {
 
   def main(argsArgs: Array[String]): Unit = {
 
     val args = argsArgs.toList
+    val searchParser = SearchParser()
 
-    println(parseInput(args))
-
+    println(InputParser.parseInput(args, searchParser))
   }
-
 }
